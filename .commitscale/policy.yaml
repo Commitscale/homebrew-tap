@@ -1,0 +1,8 @@
+# The tap's policy (server ADR 513). Each release's formula is generated from
+# the manifest the release has just verified, so a change merges through the
+# queue without a workflow, and joins the audit sample. A change to this
+# policy still needs a person.
+version: 1
+defaults:
+  autonomy: 2
+  evidence: []
