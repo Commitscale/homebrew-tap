@@ -2,33 +2,40 @@
 class Cscale < Formula
   desc "Commitscale from the terminal"
   homepage "https://commitscale.com"
-  version "0.2.7"
+  version "0.2.8"
 
   on_macos do
     on_arm do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/ccf7631d282169c21c45b2ee31426c1bec11450ea2e0d9b06702e1703d17c184/cscale-0.2.7-aarch64-apple-darwin", using: :nounzip
-      sha256 "ccf7631d282169c21c45b2ee31426c1bec11450ea2e0d9b06702e1703d17c184"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/abab70ff276ffe4954031e321f32a5b983aa586ae260e47741f8a49d4227ee9d/cscale-0.2.8-aarch64-apple-darwin", using: :nounzip
+      sha256 "abab70ff276ffe4954031e321f32a5b983aa586ae260e47741f8a49d4227ee9d"
     end
     on_intel do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/ee76b5af7126c6d6bf0a9718056bd6af13a2aeadadff4f2ca73d67e7cdb7c2c2/cscale-0.2.7-x86_64-apple-darwin", using: :nounzip
-      sha256 "ee76b5af7126c6d6bf0a9718056bd6af13a2aeadadff4f2ca73d67e7cdb7c2c2"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/f680ab63b29bab6222acb9f0a5a68b33e067e19d9a3189a0a12c314559a25e48/cscale-0.2.8-x86_64-apple-darwin", using: :nounzip
+      sha256 "f680ab63b29bab6222acb9f0a5a68b33e067e19d9a3189a0a12c314559a25e48"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/230ba0747031b359151f95350ed2a131b0d8959009bbec885d203ec75eb7a2b2/cscale-0.2.7-aarch64-unknown-linux-musl", using: :nounzip
-      sha256 "230ba0747031b359151f95350ed2a131b0d8959009bbec885d203ec75eb7a2b2"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/a8b2b4ab1fb0df6af90f7ae3b2a0e93665347b2c029f60befd2db38d63063784/cscale-0.2.8-aarch64-unknown-linux-musl", using: :nounzip
+      sha256 "a8b2b4ab1fb0df6af90f7ae3b2a0e93665347b2c029f60befd2db38d63063784"
     end
     on_intel do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/78b4f007d0f671834ec1956f5419a5bd39b7a0864e98b4d2658210daeea77ce9/cscale-0.2.7-x86_64-unknown-linux-musl", using: :nounzip
-      sha256 "78b4f007d0f671834ec1956f5419a5bd39b7a0864e98b4d2658210daeea77ce9"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/45e2ce5123ded3466973f628001a49b99089d930cae446081d133f087818bc36/cscale-0.2.8-x86_64-unknown-linux-musl", using: :nounzip
+      sha256 "45e2ce5123ded3466973f628001a49b99089d930cae446081d133f087818bc36"
     end
   end
 
   def install
     bin.install Dir["cscale-*"].first => "cscale"
     chmod 0755, bin/"cscale"
+  end
+
+  def caveats
+    <<~EOS
+      Before uninstalling, run: cscale tests cache --clear
+      Uninstalling alone leaves the check's private copies on disk.
+    EOS
   end
 
   test do
