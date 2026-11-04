@@ -2,27 +2,27 @@
 class Cscale < Formula
   desc "Commitscale from the terminal"
   homepage "https://commitscale.com"
-  version "0.2.10"
+  version "0.2.11"
 
   on_macos do
     on_arm do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/e4757ea2f476e646217b31e298cf3d8f34c25a194af60eb38d253a14f36795d4/cscale-0.2.10-aarch64-apple-darwin", using: :nounzip
-      sha256 "e4757ea2f476e646217b31e298cf3d8f34c25a194af60eb38d253a14f36795d4"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/f69dfb02ac7839627d8e8c80d406cf9c49629de9343c56fd906ccec50541e2ec/cscale-0.2.11-aarch64-apple-darwin", using: :nounzip
+      sha256 "f69dfb02ac7839627d8e8c80d406cf9c49629de9343c56fd906ccec50541e2ec"
     end
     on_intel do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/b15e827b61ebf04402e1f2322c8f893da48b1d0e62027956472f7022c7d325ff/cscale-0.2.10-x86_64-apple-darwin", using: :nounzip
-      sha256 "b15e827b61ebf04402e1f2322c8f893da48b1d0e62027956472f7022c7d325ff"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/7a18fca4aefd30b8dad671f36724a6412dd8aaaa5d8ec8ba9610c88abc475bb2/cscale-0.2.11-x86_64-apple-darwin", using: :nounzip
+      sha256 "7a18fca4aefd30b8dad671f36724a6412dd8aaaa5d8ec8ba9610c88abc475bb2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/dc39e1ab0dea63a84ae95f8e7aec6c6f4f3f4e79241f995f20edebb36c0f16ed/cscale-0.2.10-aarch64-unknown-linux-musl", using: :nounzip
-      sha256 "dc39e1ab0dea63a84ae95f8e7aec6c6f4f3f4e79241f995f20edebb36c0f16ed"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/909b19ec0e13abcf9321449afe5b936a0b59ccb7bf90e1e6ba33963d52c653b0/cscale-0.2.11-aarch64-unknown-linux-musl", using: :nounzip
+      sha256 "909b19ec0e13abcf9321449afe5b936a0b59ccb7bf90e1e6ba33963d52c653b0"
     end
     on_intel do
-      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/1e0fd1d0274b86c333b87aa29ef66c5e7617cfdc9c47eeadfcba5b8188b06043/cscale-0.2.10-x86_64-unknown-linux-musl", using: :nounzip
-      sha256 "1e0fd1d0274b86c333b87aa29ef66c5e7617cfdc9c47eeadfcba5b8188b06043"
+      url "https://pub-6742465a71474de581c3ac4b9f51dc16.r2.dev/cscale/09b64ce6ed1fb2ea746c22d220f66d48b7f11059315da8e1e485bef2fe9df893/cscale-0.2.11-x86_64-unknown-linux-musl", using: :nounzip
+      sha256 "09b64ce6ed1fb2ea746c22d220f66d48b7f11059315da8e1e485bef2fe9df893"
     end
   end
 
